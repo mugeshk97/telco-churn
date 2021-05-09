@@ -1,0 +1,4 @@
+outs:
+- md5: 8c165db2c41f2b3b88e4d2340edd1be3
+  size: 511072
+  path: feature_x_train.csv
