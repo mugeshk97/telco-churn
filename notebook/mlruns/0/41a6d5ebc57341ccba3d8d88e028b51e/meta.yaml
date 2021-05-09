@@ -1,0 +1,15 @@
+artifact_uri: file:///home/mugesh/Projects/telco-churn/notebook/mlruns/0/41a6d5ebc57341ccba3d8d88e028b51e/artifacts
+end_time: 1620551436614
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 41a6d5ebc57341ccba3d8d88e028b51e
+run_uuid: 41a6d5ebc57341ccba3d8d88e028b51e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1620551436363
+status: 3
+tags: []
+user_id: mugesh
