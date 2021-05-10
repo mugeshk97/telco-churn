@@ -55,3 +55,4 @@ report = {'val_acc': accuracy}
 
 write_json('/home/mugesh/Projects/telco-churn/report/report.json', report)
 save_model('/home/mugesh/Projects/telco-churn/model/model.pkl', model)
+save_model('/home/mugesh/Projects/telco-churn/scaler/scaler.pkl', scaler)

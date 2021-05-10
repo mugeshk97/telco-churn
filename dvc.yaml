@@ -9,6 +9,7 @@ stages:
     cmd: python src/preprocess.py train
     deps:
     - src/preprocess.py
+    - data/raw/train.csv
     outs:
     - data/feature/train_feature.csv
   train:
@@ -22,6 +23,7 @@ stages:
     - hyp.threshold
     outs:
     - model/model.pkl
+    - scaler/scaler.pkl
     metrics:
     - report/report.json:
         cache: false
