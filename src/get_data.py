@@ -32,4 +32,4 @@ for x in cursor:
 df = pd.DataFrame.from_records(
     data, columns=column_names)
 
-df.to_csv(f'/home/mugesh/Projects/telco-churn/data/raw/{dataset}csv', index = False)
+df.to_csv(f'/home/mugesh/Projects/telco-churn/data/raw/{dataset}.csv', index = False)
