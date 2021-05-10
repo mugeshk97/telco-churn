@@ -1,0 +1,4 @@
+hyp:
+  max_iter : 50
+  threshold : 0.5
+  class_weight : 'balanced'
