@@ -13,6 +13,9 @@ stages:
   preprocess:
     cmd: python src/preprocess.py train
     deps:
+    - path: data/raw/train.csv
+      md5: ed2e83570a840b4ad54aba01e04b3db1
+      size: 795240
     - path: src/preprocess.py
       md5: 470e7ea77cc6c8602dcb141c076d24d8
       size: 2052
@@ -27,8 +30,8 @@ stages:
       md5: 8c165db2c41f2b3b88e4d2340edd1be3
       size: 511072
     - path: src/train.py
-      md5: 963299b70b095c1a7fe6d7044b50782f
-      size: 1586
+      md5: f648982f350f0ea83db3fdab0d4dce25
+      size: 1619
     params:
       params.yaml:
         hyp.class_weight: balanced
@@ -41,3 +44,6 @@ stages:
     - path: report/report.json
       md5: 723b98db1f5dc9897cfc6e7ad5d719c4
       size: 37
+    - path: scaler.pkl
+      md5: 8b0bf870d6c087b22902200ebbb01f08
+      size: 752
