@@ -1,0 +1,43 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python src/get_data.py train
+    deps:
+    - path: src/get_data.py
+      md5: 3994374ec3c86c76e1b0814cb47131fb
+      size: 749
+    outs:
+    - path: data/raw/train.csv
+      md5: ed2e83570a840b4ad54aba01e04b3db1
+      size: 795240
+  preprocess:
+    cmd: python src/preprocess.py train
+    deps:
+    - path: src/preprocess.py
+      md5: 470e7ea77cc6c8602dcb141c076d24d8
+      size: 2052
+    outs:
+    - path: data/feature/train_feature.csv
+      md5: 8c165db2c41f2b3b88e4d2340edd1be3
+      size: 511072
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/feature/train_feature.csv
+      md5: 8c165db2c41f2b3b88e4d2340edd1be3
+      size: 511072
+    - path: src/train.py
+      md5: 963299b70b095c1a7fe6d7044b50782f
+      size: 1586
+    params:
+      params.yaml:
+        hyp.class_weight: balanced
+        hyp.max_iter: 50
+        hyp.threshold: 0.5
+    outs:
+    - path: model/model.pkl
+      md5: 180b7e2a438b60e57782da2648727f09
+      size: 932
+    - path: report/report.json
+      md5: 723b98db1f5dc9897cfc6e7ad5d719c4
+      size: 37

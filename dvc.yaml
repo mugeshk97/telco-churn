@@ -1,0 +1,27 @@
+stages:
+  get_data:
+    cmd: python src/get_data.py train
+    deps:
+    - src/get_data.py
+    outs:
+    - data/raw/train.csv
+  preprocess:
+    cmd: python src/preprocess.py train
+    deps:
+    - src/preprocess.py
+    outs:
+    - data/feature/train_feature.csv
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/feature/train_feature.csv
+    - src/train.py
+    params:
+    - hyp.class_weight
+    - hyp.max_iter
+    - hyp.threshold
+    outs:
+    - model/model.pkl
+    metrics:
+    - report/report.json:
+        cache: false
