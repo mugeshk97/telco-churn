@@ -12,7 +12,7 @@ payload = {'MonthlyCharges':19.45,
 'ten1-18': 0.00,
 }
     
-data = requests.post('http://127.0.0.1:5000/', json= payload)
+data = requests.post('https://murmuring-stream-94529.herokuapp.com/', json= payload)
 print(data.json())
 
 

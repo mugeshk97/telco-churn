@@ -4,8 +4,8 @@ from src.utils import load_model, load_config
 
 
 app = Flask(__name__)
-model = load_model('model/model.pkl')
-scaler = load_model('scaler/scaler.pkl')
+model = load_model('model.pkl')
+scaler = load_model('scaler.pkl')
 config = load_config()
 threshold = config['hyp']['threshold']
 
